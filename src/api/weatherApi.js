@@ -10,7 +10,7 @@ const weatherApi = axios.create({
    },
 })
 
-export const getTodayWeather = async ({cityName = 'incheon'}) => {
+export const getTodayWeather = async (cityName = 'incheon') => {
    const response = await weatherApi.get(`/weather`, {
       // https://api.openweathermap.org/data/2.5/weather?q=incheon&appid=AUTH_KEY&units=metric&lang=kr
       params: {

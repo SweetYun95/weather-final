@@ -8,7 +8,7 @@ function App() {
    return (
       <Routes>
          <Route path="/" element={<Home />} />
-         <Route path="/weather" element={<TodayWeather />} />
+         <Route path="/weather/:cityName" element={<TodayWeather />} />
          <Route path="/forecast" element={<DaytimeWeather />} />
          <Route path="/*" element={<NotFound />} />
       </Routes>
