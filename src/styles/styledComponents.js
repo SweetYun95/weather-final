@@ -1,6 +1,9 @@
 import styled from 'styled-components'
 
-export const Wrap = styled.div``
+export const Wrap = styled.div`
+   width: 100%;
+   overflow-x: hidden;
+`
 
 export const Input = styled.input`
    width: 100%;
