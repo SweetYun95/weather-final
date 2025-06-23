@@ -1,5 +1,16 @@
+import Nav from '../components/Nav'
+import Footer from '../components/Footer'
+
 function Home() {
-    return (  );
+   return (
+      <>
+         <Nav />
+         <div>
+            <p>홈페이지</p>
+         </div>
+         <Footer />
+      </>
+   )
 }
 
-export default Home;
+export default Home

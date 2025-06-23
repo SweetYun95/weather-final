@@ -1,12 +1,8 @@
 function Nav() {
    return (
       <ul>
-         <li>
-            <NavLink>오늘의 날씨</NavLink>
-         </li>
-         <li>
-            <NavLink>주간 날씨</NavLink>
-         </li>
+         <li>오늘의 날씨</li>
+         <li>주간 날씨</li>
       </ul>
    )
 }
