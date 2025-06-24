@@ -2,9 +2,9 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import { getTodayWeather } from '../api/weatherApi'
 
 export const fetchTodays = createAsyncThunk('weather/fetchTodays', async (cityName) => {
-   const data = await getTodayWeather(cityName)
-   console.log(data)
-   return data
+   const response = await getTodayWeather(cityName)
+   console.log(response)
+   return response
 })
 
 const weatherSlice = createSlice({

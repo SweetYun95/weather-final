@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const BASE_URL = 'https://api.openweathermap.org/data/2.5/'
-// const AUTH_KEY = import.meta.env.VITE_WEATHER_API_KEY
+const AUTH_KEY = import.meta.env.VITE_WEATHER_API_KEY
 
 const weatherApi = axios.create({
    baseURL: BASE_URL,
@@ -15,13 +15,13 @@ export const getTodayWeather = async (cityName = 'incheon') => {
       // https://api.openweathermap.org/data/2.5/weather?q=incheon&appid=AUTH_KEY&units=metric&lang=kr
       params: {
          q: cityName,
-         appid: import.meta.env.VITE_WEATHER_API_KEY,
+         appid: AUTH_KEY,
          units: 'metric',
          lang: 'kr',
       },
    })
 
-   return response.data
+   return response
 }
 
 export default weatherApi
