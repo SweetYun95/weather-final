@@ -1,13 +1,13 @@
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
+import './css/commit.css'
+import DaytimeCard from '../components/DaytimeCard'
 
 function DaytimeWeather() {
    return (
       <>
          <Nav />
-         <div>
-            <p>주간 날씨</p>
-         </div>
+         <DaytimeCard />
          <Footer />
       </>
    )

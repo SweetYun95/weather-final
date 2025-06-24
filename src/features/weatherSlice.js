@@ -1,16 +1,23 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
-import { getTodayWeather } from '../api/weatherApi'
+import { getTodayWeather, getDaytimeWeather } from '../api/weatherApi'
 
 export const fetchTodays = createAsyncThunk('weather/fetchTodays', async (cityName) => {
-   const response = await getTodayWeather(cityName)
-   console.log(response)
-   return response
+   const data = await getTodayWeather(cityName)
+
+   return data
+})
+
+export const fetchDaytimes = createAsyncThunk('weather/fetchDaytimes', async (cityName) => {
+   const data = await getDaytimeWeather(cityName)
+   console.log(data)
+   return data.list
 })
 
 const weatherSlice = createSlice({
    name: 'weather',
    initialState: {
       today: null,
+      daytime: [],
       loading: false,
       error: null,
    },
@@ -26,6 +33,19 @@ const weatherSlice = createSlice({
             state.today = action.payload
          })
          .addCase(fetchTodays.rejected, (state, action) => {
+            state.loading = false
+            state.error = action.error.message
+         })
+
+         .addCase(fetchDaytimes.pending, (state) => {
+            state.loading = true
+            state.error = null
+         })
+         .addCase(fetchDaytimes.fulfilled, (state, action) => {
+            state.loading = false
+            state.daytime = action.payload
+         })
+         .addCase(fetchDaytimes.rejected, (state, action) => {
             state.loading = false
             state.error = action.error.message
          })

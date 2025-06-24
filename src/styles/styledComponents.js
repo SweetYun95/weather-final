@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 export const Wrap = styled.div`
    width: 100%;
@@ -27,6 +28,23 @@ export const Button = styled.button`
    background-color: ${(props) => props.$backgrundColor || '#3b82f6'};
    width: ${(props) => props.$width || '100%'};
 
+   &:hover {
+      background-color: #2563eb;
+   }
+`
+
+export const StyledButton = styled(Link)`
+   display: inline-block;
+   padding: 10px 20px;
+   font-size: 1rem;
+   font-weight: 600;
+   color: white;
+   background-color: #3b82f6;
+   border: none;
+   border-radius: 5px;
+   text-align: center;
+   text-decoration: none;
+margin: 5px 0;
    &:hover {
       background-color: #2563eb;
    }

@@ -9,7 +9,7 @@ function App() {
       <Routes>
          <Route path="/" element={<Home />} />
          <Route path="/today/:cityName" element={<TodayWeather />} />
-         <Route path="/daytime" element={<DaytimeWeather />} />
+         <Route path="/daytime/:cityName" element={<DaytimeWeather />} />
          <Route path="/*" element={<Notfound />} />
       </Routes>
    )
