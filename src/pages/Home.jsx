@@ -6,7 +6,7 @@ function Home() {
       <>
          <Nav />
          <div>
-            <p>홈페이지</p>
+            <p>홈 페이지</p>
          </div>
          <Footer />
       </>

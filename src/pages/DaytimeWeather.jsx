@@ -1,9 +1,16 @@
+import Nav from '../components/Nav'
+import Footer from '../components/Footer'
+
 function DaytimeWeather() {
-    return ( 
-        <div>
+   return (
+      <>
+         <Nav />
+         <div>
             <p>주간 날씨</p>
-        </div>
-     );
+         </div>
+         <Footer />
+      </>
+   )
 }
 
-export default DaytimeWeather;
+export default DaytimeWeather
