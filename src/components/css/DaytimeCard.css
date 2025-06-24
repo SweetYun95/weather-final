@@ -1,0 +1,60 @@
+.daytime-container {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    padding: 20px;
+    background-color: #ccffe4; /* 연한 민트 배경 */
+    flex-wrap: wrap;
+  }
+  
+  .daytime-card {
+    background-color: #7effb2; /* 민트색 카드 */
+    width: 140px;
+    border-radius: 8px;
+    padding: 12px 8px;
+    text-align: center;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    font-family: 'sans-serif';
+  }
+  
+  .daytime-card h4 {
+    margin: 8px 0;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .icon-wrap {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .icon-wrap img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .daytime-card hr {
+    margin: 8px 0;
+    border: 0;
+    height: 1px;
+    background-color: #000;
+  }
+  
+  .info-box {
+    background-color: #eee;
+    border-radius: 6px;
+    padding: 8px;
+    font-size: 12px;
+    text-align: left;
+    line-height: 1.5;
+  }
+  
+
+  

@@ -17,7 +17,7 @@ const weatherSlice = createSlice({
    name: 'weather',
    initialState: {
       today: null,
-      daytime: [],
+      daytime: null,
       loading: false,
       error: null,
    },
@@ -36,7 +36,6 @@ const weatherSlice = createSlice({
             state.loading = false
             state.error = action.error.message
          })
-
          .addCase(fetchDaytimes.pending, (state) => {
             state.loading = true
             state.error = null

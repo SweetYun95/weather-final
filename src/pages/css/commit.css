@@ -60,33 +60,4 @@
     padding: 0 12px;
  }
 
- /* 주간 날씨 */
- .daytime-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 16px;
-    padding: 20px;
-  }
-  
-  .daytime-card {
-    width: 200px;
-    padding: 16px;
-    border-radius: 12px;
-    background-color: #f5f5f5;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  .daytime-card h4 {
-    margin-bottom: 8px;
-  }
-  
-  .daytime-card ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    font-size: 14px;
-    text-align: left;
-  }
-  
+ 
