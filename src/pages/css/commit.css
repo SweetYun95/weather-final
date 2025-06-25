@@ -3,61 +3,69 @@
    height: 803px;
    width: 100%;
 }
+.search_form {
+   text-align: center;
+}
+
+.link_to_move_btn {
+   display: flex;
+   gap: 25px;
+   width: 1000px;
+   margin: 0 auto;
+   justify-content: space-between;
+}
 
 /* TodayWeather */
 .weather_card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-    gap: 3rem;
-    background-color: #5df1d1;
-    border-radius: 12px;
-    max-width: 900px;
-    margin: 2rem auto;
- }
- 
- .weather_card img {
-    width: 200px;
-    height: 200px;
-    object-fit: contain;
- }
- 
- .weather_info {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    padding: 0 12px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 30px;
+   gap: 3rem;
+   background-color: #5df1d1;
+   border-radius: 12px;
+   max-width: 900px;
+   margin: 2rem auto;
+}
 
- }
- 
- .weather_info h2 {
-    margin: 0;
-    font-size: 1.2rem;
-    color: #4b5563;
- }
- 
- .weather_info h1 {
-    margin: 0;
-    font-size: 2rem;
-    font-weight: bold;
- }
- 
- .weather_info h3 {
-    margin: 0.5rem 0;
-    font-size: 1.5rem;
-    color: #1f2937;
- }
- 
- .temp_details {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-    font-size: 1rem;
-    color: #374151;
-    background-color: #b7ffef;
-    border-radius: 12px;
-    padding: 0 12px;
- }
+.weather_card img {
+   width: 200px;
+   height: 200px;
+   object-fit: contain;
+}
 
- 
+.weather_info {
+   display: flex;
+   flex-direction: column;
+   gap: 0.5rem;
+   padding: 0 12px;
+}
+
+.weather_info h2 {
+   margin: 0;
+   font-size: 1.2rem;
+   color: #4b5563;
+}
+
+.weather_info h1 {
+   margin: 0;
+   font-size: 2rem;
+   font-weight: bold;
+}
+
+.weather_info h3 {
+   margin: 0.5rem 0;
+   font-size: 1.5rem;
+   color: #1f2937;
+}
+
+.temp_details {
+   display: flex;
+   flex-direction: column;
+   gap: 0.25rem;
+   font-size: 1rem;
+   color: #374151;
+   background-color: #b7ffef;
+   border-radius: 12px;
+   padding: 0 12px;
+}

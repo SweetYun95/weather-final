@@ -7,17 +7,21 @@ import { StyledButton } from '../styles/styledComponents'
 
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
+import { useParams } from 'react-router-dom'
 
-function TodayWeather({ cityName }) {
+function TodayWeather() {
+   const { cityName } = useParams()
    const dispatch = useDispatch()
    const { today, loading, error } = useSelector((state) => state.weather)
 
    useEffect(() => {
-      dispatch(fetchTodays(cityName))
+      if (cityName) {
+         dispatch(fetchTodays(cityName))
+      }
    }, [dispatch, cityName])
 
    if (loading) return <p>로딩중</p>
-   if (error) return <p>Error:{error}</p>
+   if (error) return <p>Error: {error}</p>
 
    return (
       <>
@@ -43,11 +47,8 @@ function TodayWeather({ cityName }) {
                            <br />
                            최저 온도: {today.main.temp_min}°C
                         </p>
-                        <StyledButton to="/daytime">주간 날씨 보기</StyledButton>
+                        <StyledButton to={`/daytime/${cityName}`}>주간 날씨 보기</StyledButton>
                      </div>
-
-                    
-                   
                   </div>
                </div>
             )}

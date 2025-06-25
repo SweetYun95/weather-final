@@ -2,6 +2,8 @@ import Nav from '../components/Nav'
 import Footer from '../components/Footer'
 import { Button, Input } from '../styles/styledComponents'
 import './css/commit.css'
+import cityMap from '../utils/cityMap'
+
 
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
@@ -14,11 +16,23 @@ function Home() {
       setQ(e.target.value)
    }
 
+
    const handleSearch = (e) => {
-      e.preventDefault() // 기본 sumbit 버튼의 성질 방지
-      // navigate(이동할 경로)
-      navigate(`/today?q=${q.trim()}`) // 검색어를 query 파라미터로 전달
+      e.preventDefault()
+      const trimmed = q.trim()
+      if (!trimmed) {
+         alert('도시를 입력해주세요.')
+         return
+      }
+      const englishName = cityMap[trimmed] || trimmed 
+      navigate(`/today/${englishName}`)
    }
+
+   const handleQuickMove = (city) => (e) => {
+      e.preventDefault()
+      navigate(`/today/${city}`)
+   }
+
    return (
       <>
          <Nav />
@@ -29,6 +43,24 @@ function Home() {
                   검색
                </Button>
             </form>
+
+            <div className="link_to_move_btn">
+               <form className="search_form" onSubmit={handleQuickMove('Seoul')}>
+                  <Button $width="200px" type="submit">
+                     서울 날씨 보기
+                  </Button>
+               </form>
+               <form className="search_form" onSubmit={handleQuickMove('Incheon')}>
+                  <Button $width="200px" type="submit">
+                     인천 날씨 보기
+                  </Button>
+               </form>
+               <form className="search_form" onSubmit={handleQuickMove('Busan')}>
+                  <Button $width="200px" type="submit">
+                     부산 날씨 보기
+                  </Button>
+               </form>
+            </div>
          </div>
          <Footer />
       </>

@@ -2,6 +2,13 @@
    display: flex;
 }
 
-ul li{
-    margin: 0 30px;
+.nav-meun li {
+   margin: 0 30px;
+}
+
+
+.active {
+    background-color: #384cff;
+    color: #f2ff80;
+   font-weight: bold;
 }

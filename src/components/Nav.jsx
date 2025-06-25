@@ -10,10 +10,10 @@ function Nav() {
                <NavLink to="/">홈</NavLink>
             </li>
             <li>
-               <NavLink to="/today">오늘의 날씨</NavLink>
+               <NavLink to="/today/seoul">오늘의 날씨</NavLink>
             </li>
             <li>
-               <NavLink to="/daytime">주간 날씨</NavLink>
+               <NavLink to="/daytime/seoul">주간 날씨</NavLink>
             </li>
          </ul>
       </Wrap>
