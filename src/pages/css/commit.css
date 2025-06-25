@@ -1,17 +1,13 @@
-.background {
-   background-image: url('/weather-final/public/images/60a7a3c9eb-0b4a-f88b-03e3-4a7f48f1fa.gif');
-   height: 803px;
-   width: 100%;
-}
+/* Home */
 .search_form {
    text-align: center;
+   margin-top: 50px;
 }
 
 .link_to_move_btn {
    display: flex;
-   gap: 25px;
-   width: 1000px;
-   margin: 0 auto;
+   width: 800px;
+   margin: 30px auto;
    justify-content: space-between;
 }
 

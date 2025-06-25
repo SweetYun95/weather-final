@@ -4,11 +4,10 @@
 
 .nav-meun li {
    margin: 0 30px;
+   height: 68px;
 }
-
-
-.active {
-    background-color: #384cff;
-    color: #f2ff80;
-   font-weight: bold;
+.nav-meun li a {
+   color: #fff;
+   text-align: center;
+   line-height: 68px;
 }

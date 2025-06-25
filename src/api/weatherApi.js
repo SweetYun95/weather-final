@@ -5,9 +5,6 @@ const AUTH_KEY = import.meta.env.VITE_WEATHER_API_KEY
 
 const weatherApi = axios.create({
    baseURL: BASE_URL,
-   headers: {
-      accept: 'application/json',
-   },
 })
 
 // 오늘의 날씨
