@@ -4,9 +4,10 @@ import { Button, Input } from '../styles/styledComponents'
 import './css/commit.css'
 import cityMap from '../utils/cityMap'
 
-
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+
+import WeatherCardSlider from '../components/WeatherCardSlider'
 
 function Home() {
    const [q, setQ] = useState('')
@@ -16,7 +17,6 @@ function Home() {
       setQ(e.target.value)
    }
 
-
    const handleSearch = (e) => {
       e.preventDefault()
       const trimmed = q.trim()
@@ -24,7 +24,7 @@ function Home() {
          alert('도시를 입력해주세요.')
          return
       }
-      const englishName = cityMap[trimmed] || trimmed 
+      const englishName = cityMap[trimmed] || trimmed
       navigate(`/today/${englishName}`)
    }
 
@@ -61,6 +61,9 @@ function Home() {
                   </Button>
                </form>
             </div>
+               <div className="slider-wrap">
+                  <WeatherCardSlider />
+               </div>
          </div>
          <Footer />
       </>

@@ -47,7 +47,9 @@ function TodayWeather() {
                            <br />
                            최저 온도: {today.main.temp_min}°C
                         </p>
-                        <StyledButton to={`/daytime/${cityName}`}>주간 날씨 보기</StyledButton>
+                        <StyledButton $color="black" $backgrundColor="rgb(97, 207, 156);" to={`/daytime/${cityName}`}>
+                           주간 날씨 보기
+                        </StyledButton>
                      </div>
                   </div>
                </div>

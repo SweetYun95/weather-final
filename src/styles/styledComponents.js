@@ -38,13 +38,13 @@ export const StyledButton = styled(Link)`
    padding: 10px 20px;
    font-size: 1rem;
    font-weight: 600;
-   color: white;
-   background-color: #3b82f6;
+   color: ${(props) => props.$color || '#fff'};
+   background-color: ${(props) => props.$backgrundColor || '#3b82f6'};
    border: none;
    border-radius: 5px;
    text-align: center;
    text-decoration: none;
-margin: 5px 0;
+   margin: 5px 0;
    &:hover {
       background-color: #2563eb;
    }
