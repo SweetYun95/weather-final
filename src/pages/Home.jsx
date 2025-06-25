@@ -3,7 +3,6 @@ import Footer from '../components/Footer'
 import { Button, Input } from '../styles/styledComponents'
 import './css/commit.css'
 
-
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
@@ -23,9 +22,9 @@ function Home() {
    return (
       <>
          <Nav />
-         <div className='background'>
+         <div className="background">
             <form className="search_form" onSubmit={handleSearch}>
-               <Input $height="40px" $fontSize="1.1rem" value={q} onChange={handleInputChange} placeholder='도시를 입력하세요'/>
+               <Input $height="40px" $fontSize="1.1rem" value={q} onChange={handleInputChange} placeholder="도시를 입력하세요" />
                <Button $width="100px" type="submit">
                   검색
                </Button>

@@ -17,16 +17,14 @@ function DaytimeCard({ cityName = 'incheon' }) {
       const dayMap = new Map()
 
       daytime.forEach((entry) => {
-         const date = entry.dt_txt.split(' ')[0] // "2025-06-24"
+         const date = entry.dt_txt.split(' ')[0]
          if (!dayMap.has(date)) dayMap.set(date, [])
          dayMap.get(date).push(entry)
       })
 
-      // 하루에 하나의 대표 데이터를 뽑기 (예: 12:00 있으면 우선)
       return Array.from(dayMap.entries())
-         .slice(0, 5) // 최근 5일
+         .slice(0, 5)
          .map(([date, entries]) => {
-            // 대표 데이터: 12시 데이터가 있으면 그걸로, 없으면 중간값
             const representative = entries.find((e) => e.dt_txt.includes('12:00:00')) || entries[Math.floor(entries.length / 2)]
 
             const temps = entries.map((e) => e.main.temp)
@@ -45,7 +43,7 @@ function DaytimeCard({ cityName = 'incheon' }) {
                temp_max: Math.max(...tempMaxs),
                humidity: Math.round(humidities.reduce((a, b) => a + b) / humidities.length),
                clouds: Math.round(clouds.reduce((a, b) => a + b) / clouds.length),
-               pop: Math.max(...pops), // 강수 확률 중 가장 높은 값
+               pop: Math.max(...pops),
             }
          })
    }, [daytime])
@@ -59,9 +57,12 @@ function DaytimeCard({ cityName = 'incheon' }) {
          {groupedData.map((day, idx) => (
             <div key={idx} className="daytime-card">
                <h4>{day.date.slice(5).replace('-', '/')}</h4>
-               <img src={`https://openweathermap.org/img/wn/${day.icon}@2x.png`} alt="날씨 아이콘" />
+               <div className="icon-wrap">
+                  <img src={`https://openweathermap.org/img/wn/${day.icon}@2x.png`} alt="날씨 아이콘" />
+               </div>
+               <hr />
 
-               <ul>
+               <ul className="info-box">
                   <li>현재 기온: {day.temp.toFixed(1)}℃</li>
                   <li>체감 온도: {day.feels_like.toFixed(1)}℃</li>
                   <li>최고 기온: {day.temp_max.toFixed(1)}℃</li>

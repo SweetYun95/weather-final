@@ -3,7 +3,6 @@ import { getTodayWeather, getDaytimeWeather } from '../api/weatherApi'
 
 export const fetchTodays = createAsyncThunk('weather/fetchTodays', async (cityName) => {
    const data = await getTodayWeather(cityName)
-
    return data
 })
 
@@ -17,7 +16,7 @@ const weatherSlice = createSlice({
    name: 'weather',
    initialState: {
       today: null,
-      daytime: null,
+      daytime: [],
       loading: false,
       error: null,
    },
