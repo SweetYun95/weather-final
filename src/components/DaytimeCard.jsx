@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useEffect, useMemo } from 'react'
 import './css/DaytimeCard.css'
 
-function DaytimeCard({ cityName}) {
+function DaytimeCard({ cityName }) {
    const dispatch = useDispatch()
    const { daytime, loading, error } = useSelector((state) => state.weather)
 
