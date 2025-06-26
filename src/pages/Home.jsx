@@ -37,33 +37,36 @@ function Home() {
       <>
          <Nav />
          <div className="background">
-            <form className="search_form" onSubmit={handleSearch}>
-               <Input $height="40px" $fontSize="1.1rem" value={q} onChange={handleInputChange} placeholder="도시를 입력하세요" />
-               <Button $width="100px" type="submit">
-                  검색
-               </Button>
-            </form>
+            <div className="home-container">
+               <form className="search_form" onSubmit={handleSearch}>
+                  <Input $height="40px" $fontSize="1.1rem" value={q} onChange={handleInputChange} placeholder="도시를 입력하세요" />
+                  <Button $width="100px" type="submit">
+                     검색
+                  </Button>
+               </form>
 
-            <div className="link_to_move_btn">
-               <form className="search_form" onSubmit={handleQuickMove('Seoul')}>
-                  <Button $width="200px" type="submit">
-                     서울 날씨 보기
-                  </Button>
-               </form>
-               <form className="search_form" onSubmit={handleQuickMove('Incheon')}>
-                  <Button $width="200px" type="submit">
-                     인천 날씨 보기
-                  </Button>
-               </form>
-               <form className="search_form" onSubmit={handleQuickMove('Busan')}>
-                  <Button $width="200px" type="submit">
-                     부산 날씨 보기
-                  </Button>
-               </form>
-            </div>
+               <div className="link_to_move_btn">
+                  <form className="search_form" onSubmit={handleQuickMove('Seoul')}>
+                     <Button $width="200px" type="submit">
+                        서울 날씨 보기
+                     </Button>
+                  </form>
+                  <form className="search_form" onSubmit={handleQuickMove('Incheon')}>
+                     <Button $width="200px" type="submit">
+                        인천 날씨 보기
+                     </Button>
+                  </form>
+                  <form className="search_form" onSubmit={handleQuickMove('Busan')}>
+                     <Button $width="200px" type="submit">
+                        부산 날씨 보기
+                     </Button>
+                  </form>
+               </div>
+
                <div className="slider-wrap">
                   <WeatherCardSlider />
                </div>
+            </div>
          </div>
          <Footer />
       </>

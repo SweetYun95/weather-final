@@ -26,7 +26,7 @@ function TodayWeather() {
    return (
       <>
          <Nav />
-         <div>
+         <div className="background">
             {today && (
                <div className="weather_card">
                   <div>

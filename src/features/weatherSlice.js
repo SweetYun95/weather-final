@@ -8,7 +8,6 @@ export const fetchTodays = createAsyncThunk('weather/fetchTodays', async (cityNa
 
 export const fetchDaytimes = createAsyncThunk('weather/fetchDaytimes', async (cityName) => {
    const data = await getDaytimeWeather(cityName)
-   console.log(data)
    return data.list
 })
 

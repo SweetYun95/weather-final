@@ -1,0 +1,12 @@
+.city-title {
+    text-align: center;
+    margin: 2rem 0 1rem;
+  }
+  
+  .city-title h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: #b6eaff;
+    color: #3b3300;
+  }
+  

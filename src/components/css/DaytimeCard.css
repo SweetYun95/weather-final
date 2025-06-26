@@ -3,8 +3,7 @@
    justify-content: center;
    gap: 20px;
    padding: 20px;
-   background-color: #ccffe4; /* 연한 민트 배경 */
-   flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 .daytime-card {
