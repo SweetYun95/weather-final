@@ -1,8 +1,10 @@
+import { useParams } from 'react-router-dom'
+
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
 import DaytimeCard from '../components/DaytimeCard'
 import CityTitle from '../components/CityTitle'
-import { useParams } from 'react-router-dom'
+
 import './css/commit.css'
 
 function DaytimeWeather() {

@@ -22,6 +22,7 @@ const weatherSlice = createSlice({
    reducers: {},
    extraReducers: (builder) => {
       builder
+         // Today (현재 날씨)
          .addCase(fetchTodays.pending, (state) => {
             state.loading = true
             state.error = null
@@ -34,6 +35,7 @@ const weatherSlice = createSlice({
             state.loading = false
             state.error = action.error.message
          })
+         // Forecast (주간 날씨)
          .addCase(fetchDaytimes.pending, (state) => {
             state.loading = true
             state.error = null

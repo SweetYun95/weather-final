@@ -1,13 +1,13 @@
+import { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { useParams } from 'react-router-dom'
+
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
-import './css/commit.css'
-
-import { fetchTodays } from '../features/weatherSlice'
 import { StyledButton } from '../styles/styledComponents'
+import { fetchTodays } from '../features/weatherSlice'
 
-import { useDispatch, useSelector } from 'react-redux'
-import { useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import './css/commit.css'
 
 function TodayWeather() {
    const { cityName } = useParams()
@@ -47,7 +47,7 @@ function TodayWeather() {
                            <br />
                            최저 온도: {today.main.temp_min}°C
                         </p>
-                        <StyledButton $color="black" $backgrundColor="rgb(97, 207, 156);" to={`/daytime/${cityName}`}>
+                        <StyledButton $color="black" $backgroundColor="rgb(97, 207, 156);" to={`/daytime/${cityName}`}>
                            주간 날씨 보기
                         </StyledButton>
                      </div>

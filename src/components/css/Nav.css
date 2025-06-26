@@ -1,12 +1,12 @@
-.nav-meun {
+.nav-menu {
    display: flex;
 }
 
-.nav-meun li {
+.nav-menu li {
    margin: 0 30px;
    height: 68px;
 }
-.nav-meun li a {
+.nav-menu li a {
    color: #fff;
    text-align: center;
    line-height: 68px;

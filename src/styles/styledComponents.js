@@ -25,7 +25,7 @@ export const Button = styled.button`
    font-size: 1rem;
    border-radius: 4px;
    cursor: pointer;
-   background-color: ${(props) => props.$backgrundColor || '#3b82f6'};
+   background-color: ${(props) => props.$backgroundColor || '#3b82f6'};
    width: ${(props) => props.$width || '100%'};
 
    &:hover {
@@ -39,7 +39,7 @@ export const StyledButton = styled(Link)`
    font-size: 1rem;
    font-weight: 600;
    color: ${(props) => props.$color || '#fff'};
-   background-color: ${(props) => props.$backgrundColor || '#3b82f6'};
+   background-color: ${(props) => props.$backgroundColor || '#3b82f6'};
    border: none;
    border-radius: 5px;
    text-align: center;

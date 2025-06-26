@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
+
 import { fetchTodays } from '../features/weatherSlice'
+
 import { Card, CardContent, Typography, Box, CircularProgress } from '@mui/material'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Pagination } from 'swiper/modules'
+
 import 'swiper/css'
 import 'swiper/css/pagination'
 

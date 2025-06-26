@@ -1,13 +1,14 @@
-import Nav from '../components/Nav'
-import Footer from '../components/Footer'
-import { Button, Input } from '../styles/styledComponents'
-import './css/commit.css'
-import cityMap from '../utils/cityMap'
-
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
+import Nav from '../components/Nav'
+import Footer from '../components/Footer'
 import WeatherCardSlider from '../components/WeatherCardSlider'
+
+import { Button, Input } from '../styles/styledComponents'
+import cityMap from '../utils/cityMap'
+
+import './css/commit.css'
 
 function Home() {
    const [q, setQ] = useState('')

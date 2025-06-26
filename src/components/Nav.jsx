@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom'
 function Nav() {
    return (
       <Wrap>
-         <ul className="nav-meun">
+         <ul className="nav-menu">
             <li>
                <NavLink to="/">홈</NavLink>
             </li>

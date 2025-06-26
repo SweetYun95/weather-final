@@ -1,5 +1,5 @@
-import './css/Footer.css'
 import { Wrap } from '../styles/styledComponents'
+import './css/Footer.css'
 
 function Footer() {
    return (
