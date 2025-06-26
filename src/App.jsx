@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom'
+
 import Home from './pages/Home'
 import TodayWeather from './pages/TodayWeather'
 import DaytimeWeather from './pages/DaytimeWeather'

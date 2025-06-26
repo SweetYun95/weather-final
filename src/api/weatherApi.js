@@ -10,7 +10,6 @@ const weatherApi = axios.create({
 // 오늘의 날씨
 export const getTodayWeather = async (cityName = 'incheon') => {
    const response = await weatherApi.get(`/weather`, {
-      // https://api.openweathermap.org/data/2.5/weather?q=incheon&appid=AUTH_KEY&units=metric&lang=kr
       params: {
          q: cityName,
          appid: AUTH_KEY,
@@ -25,7 +24,6 @@ export const getTodayWeather = async (cityName = 'incheon') => {
 // 주간날씨
 export const getDaytimeWeather = async (cityName = 'incheon') => {
    const response = await weatherApi.get(`/forecast`, {
-      //api.openweathermap.org/data/2.5/forecast?q=incheon&appid=7067b6f59b09b2ad1c8f49bfa1f8ad49&units=metric&lang=kr
       params: {
          q: cityName,
          appid: AUTH_KEY,
